@@ -1,2 +1,2 @@
-include ':user', ':admin'
+include ':user', ':admin', ':socialMediaIntegration'
 rootProject.name='ModuleTesting'

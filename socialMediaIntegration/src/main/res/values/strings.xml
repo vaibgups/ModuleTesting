@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SocialMediaIntegration</string>
+
+    <string name="facebook_app_id">1141681022669100</string>
+    <string name="fb_login_protocol_scheme">fb1141681022669100</string>
+
+<!--    <string name="new_user">New User <font fgcolor="blue">Sign up!</font></string>-->
+    <string name="new_user">New User</string>
+    <string name="sign_up">Sign up!</string>
+    <string name="forgot">Forgot</string>
+    <string name="password">Password?</string>
+    <string name="terms_condition">By creating account, you agree to our Terms and conditions.</string>
+
+</resources>

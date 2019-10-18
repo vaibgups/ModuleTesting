@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivLoginBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:padding="10dp"
+        android:src="@drawable/ic_arrow_back_black_24dp" />
+
+    <TextView
+        android:id="@+id/tvLoginWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLoginBack"
+        android:padding="10dp"
+        android:text="Welcome!"
+        android:textColor="#FF3023AE"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvLoginWlcmMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLoginWelcome"
+        android:paddingLeft="10dp"
+        android:text="Please provide your email and password to continue."
+        android:textSize="16sp"
+        android:layout_above="@+id/llLoginFields"/>
+
+    <LinearLayout
+        android:id="@+id/llLoginFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your password"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your email ID"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLoginSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:layout_marginVertical="16dp"
+            android:textAllCaps="false"
+            style="@style/Submit"
+            android:background="@drawable/button_round_shape"
+            android:lineSpacingMultiplier="1.17"
+            />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlLoginSignUpForgotPassParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llLoginFields"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/llLoginNewUserSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_user"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/sign_up"
+                android:textSize="12sp"
+                android:textColor="@color/fb_blue"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llLoginForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/password"
+                android:textSize="12sp"
+                android:textColor="@color/fb_blue"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvLoginOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlLoginSignUpForgotPassParent"
+        android:text="- or -"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvLoginLoginWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLoginOr"
+        android:text="Login With"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvLoginLoginWith"
+        android:layout_above="@+id/tvLoginBottom"
+        >
+
+        <ImageView
+            android:id="@+id/google_login"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circule_shape"
+            android:padding="10dp"
+            android:src="@drawable/search" />
+
+        <ImageView
+            android:id="@+id/facebook_login"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/circule_shape"
+            android:padding="10dp"
+            android:src="@drawable/facebook" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvLoginBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/terms_condition"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"/>
+
+
+
+</RelativeLayout>
