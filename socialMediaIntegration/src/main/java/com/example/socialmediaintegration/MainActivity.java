@@ -3,6 +3,7 @@ package com.example.socialmediaintegration;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String TAG = "Social "+MainActivity.class.getSimpleName();
 
-//    private Button btnGoogleSignOut;
+    private Button btnLoginSubmit;
     private static final int REQ_CODE = 9001;
     private ImageView google_login, facebook_login;
     private GoogleLogin googleLogin;
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         google_login.setOnClickListener(this);
         facebook_login = findViewById(R.id.facebook_login);
         facebook_login.setOnClickListener(this);
+
+        btnLoginSubmit =  findViewById(R.id.btnLoginSubmit);
+        btnLoginSubmit.setOnClickListener(this);
     }
 
     @Override
@@ -70,6 +74,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 fbLogin.initLoginManager();
 //                googleLogin.signOut();
 //                LoginManager.getInstance().logOut();
+                break;
+            }
+
+            case R.id.btnLoginSubmit: {
+//                startActivity(new Intent(this, com.example.user.MainActivity.class));
                 break;
             }
         }
